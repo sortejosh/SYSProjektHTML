@@ -1,87 +1,199 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Teknisk fejl</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {font-family: "Lato", sans-serif;}
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+
+<style>
+    
+
+a:visited {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 7px;
+}
+
+tr:nth-child(even) {
+  background-color:  rgb(34, 34, 172);
+background: linear-gradient(90deg, rgb(34, 34, 172,1) 0%, rgb(16, 1, 226) 35%, rgb(0, 238, 255) 100%);
+}
+
+
+    
+    h1 {text-align: center;}
+    h2 {text-align: center;}
+    h3{color:  rgb(191, 51, 137);}
+body {font-family: "Lato", sans-serif;}
+/*body {padding: 0; margin: 0; background-color : rgb(245, 241, 241);}*/
+  
+body {
+    background-color:  rgb(28, 28, 172);
+background: linear-gradient(90deg, rgb(28, 28, 172,1) 0%, rgb(16, 1, 226) 35%, rgb(0, 238, 255) 100%);
+}
 .tablink {
-  background-color: #555;
-  color: white;
+  background-color: rgb(85, 85, 85);
+  color: rgb(0, 0, 0);
   float: left;
   border: none;
   outline: none;
   cursor: pointer;
-  padding: 14px 16px;
-  font-size: 17px;
-  width: 25%;
+  padding: 10px 10px;
+  font-size: 20px;
+  width: 33.333333%;
+}
+.box {
+  float: left;
+  height: 20px;
+  width: 20px;
+  margin-bottom: 15px;
+  border: 1px solid black;
+  clear: both;
+}
+.purple {
+  background-color: rgb(255, 0, 187);
 }
 
 .tablink:hover {
-  background-color: #777;
+  background-color: url image  rgb(124, 124, 124);
 }
 
-/* Style the tab content */
-.tabcontent {
-  color: white;
-  display: none;
-  padding: 50px;
-  text-align: center;
+
+        footer {
+            width: 100%;
+            bottom: 0px;
+            background-color: #000;
+            color: #fff;
+            position: absolute;
+            padding-top:15px;
+            padding-bottom:15px;
+            text-align:center;
+            font-size:10px;
+            font-weight:bold;
+        }
+        .body_sec {
+            margin-left:20px;
+        }
+
+/*#Home {background-color:rgb(255, 0, 0);}
+#Play {background-color:rgb(0, 255, 0);}
+#Setup {background-color:rgb(0, 0, 255);}*/
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-#London {background-color:red;}
-#Paris {background-color:green;}
-#Tokyo {background-color:blue;}
-#Oslo {background-color:orange;}
 </style>
-</head>
 <body>
+    
+ <body   background = "Background.png">
 
-<p>Click on the buttons inside the tabbed menu:</p>
+<div id="Home" class="tabcontent">
 
-<div id="London" class="tabcontent">
-  <h1>London</h1>
-  <p>London is the capital city of England.</p>
-</div>
 
-<div id="Paris" class="tabcontent">
-  <h1>Paris</h1>
-  <p>Paris is the capital of France.</p> 
-</div>
 
-<div id="Tokyo" class="tabcontent">
-  <h1>Tokyo</h1>
-  <p>Tokyo is the capital of Japan.</p>
-</div>
+<div id="Play" class="tabcontent" padding-top:15px
+padding-bottom:15px>
 
-<div id="Oslo" class="tabcontent">
-  <h1>Oslo</h1>
-  <p>Oslo is the capital of Norway.</p>
-</div>
 
-<button class="tablink" onclick="openCity('London', this, 'red')" id="defaultOpen">London</button>
-<button class="tablink" onclick="openCity('Paris', this, 'green')">Paris</button>
-<button class="tablink" onclick="openCity('Tokyo', this, 'blue')">Tokyo</button>
-<button class="tablink" onclick="openCity('Oslo', this, 'orange')">Oslo</button>
+<div id="Setup" class="tabcontent">
+
+<button class="tablink" onclick="openLink('Home', this, 'red')" ><b><a href="//127.0.0.1:5500/index.htm"style="text-decoration: none;" >Home</a></b></button>
+<button class="tablink" onclick="openLink('Play', this, 'green')"><a href="http://127.0.0.1:5500/play.htm" style="text-decoration: none;">Play</a></button>
+<button class="tablink" onclick="openLink('Home', this, 'blue')" id="defaultOpen"> <a href="//127.0.0.1:5500/setup.htm"style="text-decoration: none;" >Setup</a></button>
+
+
 
 <script>
-function openCity(cityName,elmnt,color) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = "";
-  }
-  document.getElementById(cityName).style.display = "block";
-  elmnt.style.backgroundColor = color;
+    function openLink(linkName,elmnt,color) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) 
+      document.getElementById(linkName).style.display = "block";
+      elmnt.style.backgroundColor = color;
 
 }
-// Get the element with id="defaultOpen" and click on it
+
+
+
 document.getElementById("defaultOpen").click();
 </script>
-   
+    <header>
+        <h1> Setup</h1>
+        
+        <h3>Standard Farve</h3>
+    </header>
+    <table>
+        <tr>
+          <th>ID</th>
+          <th>Genre</th>
+          <th>Farve</th>
+        </tr>
+
+        <tr>
+          <td>1</td>
+          <td>POP</td>
+          <td><p style="color:rgb(255, 0, 0);">Rød</p></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Rock</td>
+          <td><p style="color:rgb(00, 0, 255);">Blå</p></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Rnb</td>
+          <td><p style="color:rgb(0, 255, 55);">Grøn</p></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Country</td>
+          <td><p style="color:rgb(0, 0, 255);">Blå</p></td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Jazz</td>
+          <td><p style="color:rgb(255, 0, 0);">Rød</p></td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Hiphop</td>
+          <td><p style="color:rgb(0, 255, 55);">Grøn</p></td>
+        </tr>
+      </table>
+
+        <h2 class="center">  Fordyb dig i musikken</h2>
+
+    <div class = "body_sec">
+    </div>
+ 
+    
+
+    <footer>
+        <div class="topnav">
+
+
+            <a href="http://127.0.0.1:5500/News.htm">News</a>
+            <a href="http://127.0.0.1:5500/Contact.htm">Concact</a>
+            <a href="http://127.0.0.1:5500/About.htm">About</a>
+    </footer>
+</div>
+
+</div>
+  </div>
 </body>
-</html> 
+</html>

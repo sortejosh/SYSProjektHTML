@@ -1,19 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Teknisk fejl</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <style>
+
+a:visited {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
+
 
     
     h1 {text-align: center;}
     h2 {text-align: center;}
 body {font-family: "Lato", sans-serif;}
-/*body {padding: 0; margin: 0; background-color : rgb(245, 241, 241);}*/
+
+
   
 body {
-    background: url(Background.png) rgb(194, 194, 206);
-  }
-
+    background-color:  rgb(121, 9, 9);
+background: linear-gradient(90deg, rgb(121, 9, 9, 1) 0%, rgb(255, 0, 0) 35%, rgb(222, 2, 138) 100%);
+}
 .tablink {
   background-color: rgb(85, 85, 85);
   color: rgb(0, 0, 0);
@@ -22,31 +33,23 @@ body {
   outline: none;
   cursor: pointer;
   padding: 10px 10px;
-  font-size: 15px;
+  font-size: 20px;
   width: 33.333333%;
 }
 
 .tablink:hover {
-  background-color: rgb(183, 183, 183);
+  background-color: url image  rgb(183, 183, 183);
 }
 
 
-/* Style the tab content */
-.tabcontent {
-  color: white;
-  display: none;
-  padding: 1px 1px;
-  text-align: center;
 
 
-
-}
 
         footer {
             width: 100%;
             bottom: 0px;
-            background-color: #000;
-            color: #fff;
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
             position: absolute;
             padding-top:15px;
             padding-bottom:15px;
@@ -58,9 +61,9 @@ body {
             margin-left:20px;
         }
 
-#Home {background-color:rgb(255, 0, 0);}
+/*#Home {background-color:rgb(255, 0, 0);}
 #Play {background-color:rgb(0, 255, 0);}
-#Setup {background-color:rgb(0, 0, 255);}
+#Setup {background-color:rgb(0, 0, 255);}*/
 img {
   display: block;
   margin-left: auto;
@@ -69,7 +72,7 @@ img {
 
 </style>
 <body>
-
+ <body   background = "Background.png">
 
 <div id="Home" class="tabcontent">
 
@@ -89,48 +92,41 @@ padding-bottom:15px>
 </div>
 
 
-
-<button class="tablink" onclick="openCity('Home', this, 'red')" id="defaultOpen">Home</button>
-<button class="tablink" onclick="openCity('Play', this, 'green')">Play</button>
-<button class="tablink" onclick="openCity('Setup', this, 'blue')">Setup</button>
+<button class="tablink" onclick="openLink('Home', this, 'red')" id="defaultOpen"><b> <a href="//127.0.0.1:5500/index.htm"style="text-decoration: none;" >Home</a></b></button>
+<button class="tablink" onclick="openLink('Play', this, 'green')"><a href="http://127.0.0.1:5500/Play.htm" style="text-decoration: none;">Play</a></button>
+<button class="tablink" onclick="openLink('Setup', this, 'blue')"><a href="http://127.0.0.1:5500/Setup.htm" style="text-decoration: none;">Setup</a></button>
 
 <script>
-function openCity(cityName,elmnt,color) {
+function openLink(linkName,elmnt,color) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = "";
-  }
-  document.getElementById(cityName).style.display = "block";
+  for (i = 0; i < tabcontent.length; i++) 
+  document.getElementById(linkName).style.display = "block";
   elmnt.style.backgroundColor = color;
 
 }
 
-// Get the element with id="defaultOpen" and click on it
+
 document.getElementById("defaultOpen").click();
 </script>
     <header>
         <h1> Velkommen til Lysdiodemusik</h1>
     </header>
 
-    <img src="images/Logo.jpg" alt="Logo" width="400" height="400" class="center" >
+    <img src="images/Logo.jpg" alt="Teknisk fejls logo" width="400" height="400" class="center" >
         <h2 class="center">  Fordyb dig i musikken</h2>
-    <!-- Body section -->
+
     <div class = "body_sec">
     </div>
-     
-    <!-- Footer Section -->
+ 
+
     <footer>
         <div class="topnav">
         
-            <a class="active" href="#home"></a>
-            <a href="#news">News</a>
-            <a href="#contact">Contact</a>
-            <a href="#about">About</a>
+
+            <a href="http://127.0.0.1:5500/News.htm">News</a>
+            <a href="http://127.0.0.1:5500/Contact.htm">Concact</a>
+            <a href="http://127.0.0.1:5500/About.htm">About</a>
     </footer>
 </div>
 

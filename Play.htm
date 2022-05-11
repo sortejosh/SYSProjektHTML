@@ -1,12 +1,137 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <title>Teknisk fejl</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<style>
+
+
+img{
+  mix-blend-mode: lighten; color:  rgb(0, 0, 0);
+}
+
+a:visited {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+
     
+    h1 {text-align: center;}
+    h2 {text-align: center;}
+body {font-family: "Lato", sans-serif;}
+/*body {padding: 0; margin: 0; background-color : rgb(245, 241, 241);}*/
+  
+body {
+    background: rgb(9, 121, 15);
+background: linear-gradient(90deg, rgb(9, 121, 15) 0%, rgb(5, 219, 15) 35%, rgb(162, 255,1) 100%);
+  }
+.tablink {
+  background-color: rgb(85, 85, 85);
+  color: rgb(0, 0, 0);
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 10px;
+  font-size: 20px;
+  width: 33.333333%;
+}
+
+.tablink:hover {
+  background-color: url image  rgb(136, 136, 136);
+}
+
+
+        footer {
+            width: 100%;
+            bottom: 0px;
+            background-color: #000;
+            color: #fff;
+            position: absolute;
+            padding-top:15px;
+            padding-bottom:15px;
+            text-align:center;
+            font-size:10px;
+            font-weight:bold;
+        }
+        .body_sec {
+            margin-left:20px;
+        }
+
+/*#Home {background-color:rgb(255, 0, 0);}
+#Play {background-color:rgb(0, 255, 0);}
+#Setup {background-color:rgb(0, 0, 255);}*/
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+</style>
+<body>
+ <body   background = "Background.png" >
+
+<div id="Home" class="tabcontent">
+
+
+</div>
+
+<div id="Play" class="tabcontent" padding-top:15px
+padding-bottom:15px>
+ 
+
+
+</div>
+
+<div id="Setup" class="tabcontent">
+
+
+</div>
+
+
+<button class="tablink" onclick="openLink('Home', this, 'red')" ><b><a href="//127.0.0.1:5500/index.htm"style="text-decoration: none;" >Home</a></b></button>
+<button class="tablink" onclick="openLink('Play', this, 'green')"id="defaultOpen"><a href="http://127.0.0.1:5500/play.htm" style="text-decoration: none;">Play</a></button>
+<button class="tablink" onclick="openLink('Home', this, 'blue')"> <a href="//127.0.0.1:5500/setup.htm"style="text-decoration: none;" >Setup</a></button>
+
+<script>
+    function openLink(linkName,elmnt,color) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) 
+      document.getElementById(linkName).style.display = "block";
+      elmnt.style.backgroundColor = color;
+
+}
+
+document.getElementById("defaultOpen").click();
+</script>
+    <header>
+        <h1> Play</h1>
+    </header>
+    <div id="myDIV">
+        <img src="images/Background.png" alt="Logo" width="400" height="400" class="center" >
+        <h2 class="center">  Fordyb dig i musikken</h2>
+
+    <div class = "body_sec">
+    </div>
+ 
+    
+
+    <footer>
+        <div class="topnav">
+        
+
+            <a href="http://127.0.0.1:5500/News.htm">News</a>
+            <a href="http://127.0.0.1:5500/Contact.htm">Concact</a>
+            <a href="http://127.0.0.1:5500/About.htm">About</a>
+    </footer>
+</div>
+
+</div>
+  </div>
 </body>
 </html>
